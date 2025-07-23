@@ -1,0 +1,171 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.landing-black {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: #000; /* Ensures black background */
+  position: relative;
+}
+
+.landing-header,
+.landing-content {
+  pointer-events: none;
+}
+
+/* If you have interactive elements inside, re-enable pointer events for them: */
+.landing-header a,
+.landing-content button,
+.landing-content a {
+  pointer-events: auto;
+}
+
+.landing-border {
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  background: #000;
+  position: relative;
+  display: block;
+
+  width: 97vw;           /* Slightly increased from 96vw */
+  height: 92vh;          /* Slightly increased from 85vh */
+  max-width: 1850px;     /* Slightly increased from 1800px */
+  max-height: 950px;     /* Slightly increased from 900px */
+    /* Keep as is, or adjust if you want a different shape */
+}
+
+.mode-switch-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  display: flex;
+  gap: 12px;
+  background: transparent;
+  align-items: center;
+}
+
+/* Optional: style the labels and checkboxes for better appearance */
+.mode-switch-container label {
+  color: #fff;
+  font-family: 'Thasadith', Arial, sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+.mode-switch-container input[type="checkbox"] {
+  margin-right: 4px;
+}
+
+.border-wrapper {
+  position: relative;
+  width: fit-content;
+  height: 92vh;
+  max-height: 950px;
+}
+
+.vertical-border-text {
+  position: absolute;
+  left: -28px;
+  top: 80%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: 'Thasadith', Arial, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  z-index: 12;
+  pointer-events: auto;
+  user-select: none;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  background: transparent;
+  padding-bottom: 8px;
+}
+
+/* Remove previous label/input styles for .vertical-border-text */
+.vertical-border-text label,
+.vertical-border-text input[type="checkbox"] {
+  display: none;
+}
+
+.intro-fade {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.intro-title {
+  color: #fff;
+  font-size: 2.5rem;
+  font-family: 'Thasadith', Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.intro-main {
+  display: inline-block;
+  animation: fadeOutMain 0.7s 1.2s forwards;
+}
+.intro-sub {
+  color: #ccc;
+  font-weight: 300;
+  margin-left: 0.5rem;
+  display: inline-block;
+  animation: fadeOutSub 0.7s 1.4s forwards;
+}
+
+@keyframes fadeOutMain {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fadeOutSub {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.landing-fade {
+  animation: fadeInLanding 0.8s ease;
+}
+
+@keyframes fadeInLanding {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+

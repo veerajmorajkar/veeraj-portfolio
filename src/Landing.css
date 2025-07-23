@@ -1,0 +1,417 @@
+
+.landing-header {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    color: #fff;
+    z-index: 2;
+  }
+
+.landing-border {
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  background: #000;
+  position: relative;
+  width: 97vw;
+  height: 92vh;
+  max-width: 1850px;
+  max-height: 950px;
+  overflow: hidden;
+  /* No padding here! */
+}
+
+.dither-bg {
+  position: absolute !important;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.left-column {
+  position: absolute;
+  top: 32px;
+  left: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+  color: #fff;
+  pointer-events: none;
+}
+
+.left-column button,
+.left-column a,
+.left-column input,
+.left-column select,
+.left-column textarea {
+  pointer-events: auto;
+}
+
+.sidebar-nav {
+  margin-top: 124px; /* Adjust this value as needed */
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 8px;     /* Decrease spacing between buttons */
+}
+
+.sidebar-nav button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-family: 'Thasadith', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;      /* Make buttons bold */
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.sidebar-nav button:hover,
+.sidebar-nav button:focus {
+  color: #aaaaaa;
+  outline: none;
+}
+
+.landing-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+}
+
+body {
+  background: #000;
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+  .landing-border > *:not(.landing-header) {
+    width: 100%;
+    height: 100%;
+  }
+  
+.inside-content {
+  color: #fff;               
+
+}
+
+.name {
+    
+    
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  margin: 0 0 8px 0; /* Add bottom margin */
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+    
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0; /* Keep this, since .name now has bottom margin */
+  color: #ccc;
+  letter-spacing: 0.5px;
+}
+
+body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
+  font-family: 'Thasadith', Arial, sans-serif;
+}
+
+.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: #000; /* Ensures black background */
+}
+
+.vertical-border-text {
+  position: absolute;
+  left: -40px;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  color: #fff;
+  font-family: 'Thasadith', Arial, sans-serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  z-index: 3;
+  pointer-events: auto;
+  user-select: none;
+  transform: none;
+  background: transparent;
+}
+
+.landing-bottom-right-text {
+  position: absolute !important;
+  right: 32px !important;
+  bottom: 32px !important;
+  max-width: 800px;
+  color: #fff;
+  padding: 32px 32px;
+  font-size: 25px; /* Try reducing this */
+  line-height: 1.4;
+  z-index: 3;
+  font-family: 'Press Start 2P', monospace;
+  text-align: right;
+  border-radius: 8px;
+  
+  overflow: auto;
+  overflow-y: auto;
+  max-height: 390px; /* or whatever fits */
+  pointer-events: none;
+}
+
+.technical-box {
+  position: absolute !important;
+  right: 32px !important;
+  top: 32px !important;
+  bottom: auto !important;
+  max-width: 800px;
+  max-height: 800px;
+  min-height: 0;
+  text-align: right;
+  border-radius: 12px;
+  padding: 32px 32px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 25px;
+  color: #fff;
+  background: transparent;
+  overflow: auto;
+}
+
+.education-box {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+  max-width: 800px;
+  min-width: 400px;
+  max-height: 520px;
+  border-radius: 12px;
+  padding: 32px 32px;
+  z-index: 3;
+  text-align: right;
+ /* or your preferred color */
+  color: #222;
+  display: block;
+}
+
+
+.project-box {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+  max-width: 800px;
+  min-width: 400px;
+  max-height: 410px;
+  border-radius: 12px;
+  padding: 32px 32px;
+  z-index: 3;
+  text-align: right;
+   /* or your preferred color */
+  color: #222;
+  display: block;
+}
+
+
+.experience-box {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+  max-width: 800px;
+  min-width: 400px;
+  max-height: 370px;
+  border-radius: 12px;
+  padding: 32px 32px;
+  z-index: 3;
+  text-align: right;
+  /* or your preferred color */
+  color: #222;
+  display: block;
+}
+
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: flex-end;
+}
+.edu-item {
+  text-align: right;
+}
+.edu-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.edu-degree {
+  font-family: 'Thasadith', Arial, sans-serif;
+  font-size: 1vw;
+  color: #ccc;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.skills-item {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #fff;
+  text-align: right;
+  letter-spacing: 1px;
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+.exp-item {
+  text-align: right;
+}
+.exp-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.exp-desc {
+  font-family: 'Thasadith', Arial, sans-serif;
+  font-size: 1vw;
+  color: #ccc;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.proj-list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+.proj-item {
+  text-align: right;
+}
+.proj-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.proj-desc {
+  font-family: 'Thasadith', Arial, sans-serif;
+  font-size: 1vw;
+  color: #ccc;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 400ms, transform 400ms;
+}
+.fade-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.fade-exit-active {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 400ms, transform 400ms;
+}
+
+/* DARK MODE (default) */
+.center-container.dark-mode {
+  --bg: #000;
+  --text: #fff;
+  --border: #fff;
+}
+.center-container.light-mode {
+  --bg: #fff;
+  --text: #000;
+  --border: #000;
+}
+
+.center-container {
+  background: var(--bg);
+}
+.landing-border {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.landing-border .name,
+.landing-border .subtitle,
+.landing-border .sidebar-nav,
+.landing-border .vertical-border-text {
+  color: var(--text);
+}
+
+/* LIGHT MODE */
+.center-container.light-mode {
+  background: #fff;
+}
+.landing-border.light-mode {
+  background: #fff;
+  border: 1px solid #000;
+  color: #000;
+}
+.landing-border.light-mode .name,
+.landing-border.light-mode .subtitle,
+.landing-border.light-mode .sidebar-nav,
+.landing-border.light-mode .vertical-border-text {
+  color: #000;
+}
+
+.landing-border.light-mode .landing-bottom-right-text,
+.landing-border.light-mode .education-box,
+.landing-border.light-mode .project-box,
+.landing-border.light-mode .experience-box {
+  color: #000;
+  background: #fffbe6; /* or #fff for pure white */
+  border-color: #000;
+}
+
+
+
+
