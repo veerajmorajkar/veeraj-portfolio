@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/veeraj-portfolio/static/css/main.69516d0a.css",
+    "main.js": "/veeraj-portfolio/static/js/main.6bc617c6.js",
+    "static/js/453.1d4875f6.chunk.js": "/veeraj-portfolio/static/js/453.1d4875f6.chunk.js",
+    "index.html": "/veeraj-portfolio/index.html",
+    "main.69516d0a.css.map": "/veeraj-portfolio/static/css/main.69516d0a.css.map",
+    "main.6bc617c6.js.map": "/veeraj-portfolio/static/js/main.6bc617c6.js.map",
+    "453.1d4875f6.chunk.js.map": "/veeraj-portfolio/static/js/453.1d4875f6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.69516d0a.css",
+    "static/js/main.6bc617c6.js"
+  ]
+}
