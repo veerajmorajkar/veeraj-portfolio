@@ -621,7 +621,28 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
         
         }
         }
-      
+        @media (max-width: 560px) {
+          .education-box{
+          
+            top:40%;
+          
+          }
+        }
+          @media (max-width: 560px) {
+            .project-box{
+            
+              top: 40%;
+            
+            }
+            }
+            @media (max-width: 560px) {
+              .experience-box{
+              
+                top:40%;
+              
+              }
+              }
+  
 
 
       @media (max-height: 800px) {
