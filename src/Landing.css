@@ -663,6 +663,13 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
       
         }
       }
+      @media (max-width: 560px) {
+        .left-column {
+          
+          left: 24px;
+      
+        }
+      }
       @media (max-width: 650px) {
         .sidebar-nav {
           
