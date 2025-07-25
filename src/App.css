@@ -51,6 +51,21 @@ html, body {
   overflow: hidden;
 }
 
+/* Mobile height adjustments */
+@media (max-width: 768px) {
+  .landing-border {
+    height: calc(100vh - 120px);
+    max-height: calc(100vh - 120px);
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-border {
+    height: calc(100vh - 160px);
+    max-height: calc(100vh - 160px);
+  }
+}
+
 .mode-switch-container {
   position: absolute;
   top: 10px;
