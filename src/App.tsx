@@ -31,7 +31,7 @@ const TECHNICAL_SKILLS_TEXT = `
   <div class='skills-item'>UI/UX DESIGN</div>
   <div class='skills-item'>LTSPICE</div>
   <div class='skills-item'>MATLAB</div>
-  <div class='skills-item'>AUTOCAD</div>
+  <div class='skills-item'>TYPESCRIPT</div>
   <div class='skills-item'>WEB DEVELOPMENT</div>
   <div class='skills-item'>APP DEVELOPMENT</div>
 </div>
@@ -66,9 +66,9 @@ const PROJECTS_TEXT = `
 `;
 
 function App() {
-  const [mode, setMode] = useState<'dark' | 'light'>("dark");
   const [bottomText, setBottomText] = useState<string>(ABOUT_TEXT);
   const [showIntro, setShowIntro] = useState(true);
+  const [activeNav, setActiveNav] = useState<'about' | 'education' | 'technical' | 'experience' | 'projects'>('about');
 
   useEffect(() => {
     const timer = setTimeout(() => setShowIntro(false), 2000); // 2 seconds
@@ -76,6 +76,7 @@ function App() {
   }, []);
 
   const handleNav = (target: 'about' | 'education' | 'technical' | 'experience' | 'projects') => {
+    setActiveNav(target);
     if (target === 'about') setBottomText(ABOUT_TEXT);
     else if (target === 'education') setBottomText(EDUCATION_TEXT);
     else if (target === 'technical') setBottomText(TECHNICAL_SKILLS_TEXT);
@@ -94,15 +95,7 @@ function App() {
         </div>
       ) : (
         <div className="border-wrapper landing-fade">
-          <Landing mode={mode} setMode={setMode} onNav={handleNav} bottomText={bottomText} />
-          <div
-            className="vertical-border-text"
-            onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
-            style={{ cursor: 'pointer' }}
-            title="Toggle dark/light mode"
-          >
-            {mode === 'dark' ? '■DARK□LIGHT' : '□DARK■LIGHT'}
-          </div>
+          <Landing onNav={handleNav} bottomText={bottomText} activeNav={activeNav} />
         </div>
       )}
     </div>

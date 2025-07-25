@@ -1,34 +1,73 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./Landing.css";
 import Dither from './Dither/Dither';
-import profileImg from "./assets/your-profile-image.png"; // update with your image
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 
+const NAVS = [
+  { key: 'about', label: 'about me' },
+  { key: 'education', label: 'education' },
+  { key: 'technical', label: 'technical skills' },
+  { key: 'experience', label: 'experience' },
+  { key: 'projects', label: 'projects' },
+];
+
 interface LandingProps {
-  mode: 'dark' | 'light';
-  setMode: (mode: 'dark' | 'light') => void;
   onNav: (target: 'about' | 'education' | 'technical' | 'experience' | 'projects') => void;
   bottomText: string;
+  activeNav: 'about' | 'education' | 'technical' | 'experience' | 'projects';
 }
 
-const Landing: React.FC<LandingProps> = ({ mode, setMode, onNav, bottomText }) => {
+const Landing: React.FC<LandingProps> = ({ onNav, bottomText, activeNav }) => {
   const nodeRef = useRef<HTMLDivElement>(null);
+  const [mousePos, setMousePos] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    setMousePos({ x: e.nativeEvent.clientX, y: e.nativeEvent.clientY });
+  };
+
   return (
-    <div className="landing-border">
-      <Dither mode={mode} />
+    <div className="landing-border" onMouseMove={handleMouseMove}>
+      <Dither externalMousePos={mousePos} />
       <div className="left-column">
         <h1 className="name">Veeraj Morajkar</h1>
         <p className="subtitle">designer &amp; developer</p>
         <nav className="sidebar-nav">
           <ul>
-            <li><button onClick={() => onNav('about')}>about me</button></li>
-            <li><button onClick={() => onNav('education')}>education</button></li>
-            <li><button onClick={() => onNav('technical')}>technical skills</button></li>
-            <li><button onClick={() => onNav('experience')}>experience</button></li>
-            <li><button onClick={() => onNav('projects')}>projects</button></li>
+            {NAVS.map(nav => (
+              <li key={nav.key}>
+                <button
+                  onClick={() => onNav(nav.key as any)}
+                  style={{ minWidth: 80 }}
+                >
+                  {activeNav === nav.key ? (
+                    <span style={{
+                      display: 'inline-block',
+                      width: 12,
+                      height: 12,
+                      borderRadius: '50%',
+                      background: '#fff',
+                      verticalAlign: 'middle'
+                    }} />
+                  ) : nav.label}
+                </button>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
+      {activeNav === 'about' && (
+        <div className="social-links-box">
+          <button className="social-link-btn" onClick={() => window.open('https://www.linkedin.com/in/veeraj-morajkar-a24994244/', '_blank')}>
+            <b>LinkedIn</b> <span style={{fontWeight: 'bold'}}>&#8599;</span>
+          </button>
+          <button className="social-link-btn" onClick={() => window.open('https://github.com/veerajmorajkar', '_blank')}>
+            <b>Github</b> <span style={{fontWeight: 'bold'}}>&#8599;</span>
+          </button>
+          <button className="social-link-btn" onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=mkar.veeraj@gmail.com&su=SUBJECT&body=BODY', '_blank')}>
+            <b>Email</b> <span style={{fontWeight: 'bold'}}>&#8599;</span>
+          </button>
+        </div>
+      )}
       <SwitchTransition mode="out-in">
         <CSSTransition
           key={bottomText}

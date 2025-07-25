@@ -28,6 +28,7 @@ uniform float waveSpeed;
 uniform float waveFrequency;
 uniform float waveAmplitude;
 uniform vec3 waveColor;
+uniform vec3 backgroundBaseColor;
 uniform vec2 mousePos;
 uniform int enableMouseInteraction;
 uniform float mouseRadius;
@@ -95,8 +96,9 @@ void main() {
     float effect = 1.0 - smoothstep(0.0, mouseRadius, dist);
     f -= 0.5 * effect;
   }
-  vec3 col = mix(vec3(0.0), waveColor, f);
-  gl_FragColor = vec4(col, 1.0);
+  vec3 col = mix(backgroundBaseColor, waveColor, f);
+  float alpha = (length(col - backgroundBaseColor) < 0.01) ? 0.0 : 1.0;
+  gl_FragColor = vec4(col, alpha);
 }
 `;
 
@@ -195,6 +197,8 @@ interface DitheredWavesProps {
   disableAnimation: boolean;
   enableMouseInteraction: boolean;
   mouseRadius: number;
+  externalMousePos?: { x: number; y: number };
+  backgroundBaseColor: [number, number, number];
 }
 
 function DitheredWaves({
@@ -207,6 +211,8 @@ function DitheredWaves({
   disableAnimation,
   enableMouseInteraction,
   mouseRadius,
+  externalMousePos,
+  backgroundBaseColor,
 }: DitheredWavesProps) {
   const mesh = useRef<THREE.Mesh>(null);
   const [mousePos, setMousePos] = useState<{ x: number; y: number }>({
@@ -215,7 +221,7 @@ function DitheredWaves({
   });
   const { viewport, size, gl } = useThree();
 
-  const waveUniformsRef = useRef<WaveUniforms>({
+  const waveUniformsRef = useRef<WaveUniforms & { backgroundBaseColor: THREE.Uniform<THREE.Color> }>({
     time: new THREE.Uniform(0),
     resolution: new THREE.Uniform(new THREE.Vector2(0, 0)),
     waveSpeed: new THREE.Uniform(waveSpeed),
@@ -225,6 +231,7 @@ function DitheredWaves({
     mousePos: new THREE.Uniform(new THREE.Vector2(0, 0)),
     enableMouseInteraction: new THREE.Uniform(enableMouseInteraction ? 1 : 0),
     mouseRadius: new THREE.Uniform(mouseRadius),
+    backgroundBaseColor: new THREE.Uniform(new THREE.Color(...backgroundBaseColor)),
   });
 
   useEffect(() => {
@@ -237,6 +244,12 @@ function DitheredWaves({
     }
   }, [size, gl]);
 
+  useEffect(() => {
+    if (externalMousePos) {
+      setMousePos(externalMousePos);
+    }
+  }, [externalMousePos]);
+
   useFrame(({ clock }) => {
     if (!disableAnimation) {
       waveUniformsRef.current.time.value = clock.getElapsedTime();
@@ -248,6 +261,7 @@ function DitheredWaves({
     waveUniformsRef.current.enableMouseInteraction.value =
       enableMouseInteraction ? 1 : 0;
     waveUniformsRef.current.mouseRadius.value = mouseRadius;
+    waveUniformsRef.current.backgroundBaseColor.value.set(...backgroundBaseColor);
     if (enableMouseInteraction) {
       waveUniformsRef.current.mousePos.value.set(mousePos.x, mousePos.y);
     }
@@ -301,6 +315,7 @@ interface DitherProps {
   enableMouseInteraction?: boolean;
   mouseRadius?: number;
   mode?: 'dark' | 'light';
+  externalMousePos?: { x: number; y: number };
 }
 
 export default function Dither({
@@ -313,7 +328,11 @@ export default function Dither({
   disableAnimation = false,
   enableMouseInteraction = true,
   mouseRadius = 1,
+  mode = 'dark',
+  externalMousePos,
 }: DitherProps) {
+  // 2. Set backgroundBaseColor based on mode
+  const backgroundBaseColor: [number, number, number] = mode === 'light' ? [1, 1, 1] : [0, 0, 0];
   return (
     <Canvas
       className="dither-container"
@@ -331,6 +350,8 @@ export default function Dither({
         disableAnimation={disableAnimation}
         enableMouseInteraction={enableMouseInteraction}
         mouseRadius={mouseRadius}
+        externalMousePos={externalMousePos}
+        backgroundBaseColor={backgroundBaseColor}
       />
     </Canvas>
   );

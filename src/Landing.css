@@ -36,7 +36,6 @@
   align-items: flex-start;
   z-index: 2;
   color: #fff;
-  pointer-events: none;
 }
 
 .left-column button,
@@ -137,7 +136,7 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
   justify-content: center;
   min-height: 100vh;
   width: 100vw;
-  background: #000; /* Ensures black background */
+  background: #000; /* Reverted from #fff to #000 */
 }
 
 .vertical-border-text {
@@ -162,28 +161,30 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
 .landing-bottom-right-text {
   position: absolute !important;
   right: 32px !important;
-  bottom: 32px !important;
-  max-width: 800px;
+  top:50%;
+  min-width: 40%;
+  max-width:40%;
   color: #fff;
   padding: 32px 32px;
-  font-size: 25px; /* Try reducing this */
+  font-size: 20px; /* Try reducing this */
   line-height: 1.4;
   z-index: 3;
   font-family: 'Press Start 2P', monospace;
-  text-align: right;
+  text-align: left;
   border-radius: 8px;
-  
   overflow: auto;
-  overflow-y: auto;
-  max-height: 390px; /* or whatever fits */
+  max-height: 360px; /* or whatever fits */
   pointer-events: none;
+}
+.edu-list, .skills-list, .exp-list, .proj-list {
+  pointer-events: auto;
 }
 
 .technical-box {
   position: absolute !important;
-  right: 32px !important;
-  top: 32px !important;
-  bottom: auto !important;
+  right: 0;
+  top: 10%;
+  bottom: 0 !important;
   max-width: 800px;
   max-height: 800px;
   min-height: 0;
@@ -191,7 +192,7 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
   border-radius: 12px;
   padding: 32px 32px;
   font-family: 'Press Start 2P', monospace;
-  font-size: 25px;
+  font-size: 1.2rem;
   color: #fff;
   background: transparent;
   overflow: auto;
@@ -199,11 +200,12 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
 
 .education-box {
   position: absolute;
-  right: 32px;
-  bottom: 32px;
-  max-width: 800px;
-  min-width: 400px;
-  max-height: 520px;
+  right: 0%;
+  top: 30%;
+  bottom: 0%;
+  max-width: 80%;
+  min-width: 30%;
+  max-height: 60%;
   border-radius: 12px;
   padding: 32px 32px;
   z-index: 3;
@@ -216,11 +218,12 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
 
 .project-box {
   position: absolute;
-  right: 32px;
-  bottom: 32px;
-  max-width: 800px;
-  min-width: 400px;
-  max-height: 410px;
+  right: 0%;
+  top: 40%;
+  bottom: 0%;
+  max-width: 50%;
+  min-width: 30%;
+  max-height: 50%;
   border-radius: 12px;
   padding: 32px 32px;
   z-index: 3;
@@ -233,11 +236,12 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
 
 .experience-box {
   position: absolute;
-  right: 32px;
-  bottom: 32px;
-  max-width: 800px;
-  min-width: 400px;
-  max-height: 370px;
+  right: 0%;
+  top: 50%;
+  bottom: 0%;
+  max-width: 50%;
+  min-width: 30%;
+  max-height: 50%;
   border-radius: 12px;
   padding: 32px 32px;
   z-index: 3;
@@ -258,7 +262,7 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
 }
 .edu-title {
   font-family: 'Press Start 2P', monospace;
-  font-size: 1.5vw;
+  font-size: 27px;
   font-weight: bold;
   color: #fff;
   line-height: 1.2;
@@ -266,7 +270,7 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
 }
 .edu-degree {
   font-family: 'Thasadith', Arial, sans-serif;
-  font-size: 1vw;
+  font-size: 17px;
   color: #ccc;
   font-weight: bold;
   margin-bottom: 0;
@@ -282,7 +286,7 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
 
 .skills-item {
   font-family: 'Press Start 2P', monospace;
-  font-size: 1.5vw;
+  font-size: 25px;
   font-weight: bold;
   color: #fff;
   text-align: right;
@@ -301,7 +305,7 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
 }
 .exp-title {
   font-family: 'Press Start 2P', monospace;
-  font-size: 1.5vw;
+  font-size: 27px;
   font-weight: bold;
   color: #fff;
   line-height: 1.2;
@@ -309,7 +313,7 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
 }
 .exp-desc {
   font-family: 'Thasadith', Arial, sans-serif;
-  font-size: 1vw;
+  font-size: 17px;
   color: #ccc;
   font-weight: bold;
   margin-bottom: 0;
@@ -327,7 +331,7 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
 }
 .proj-title {
   font-family: 'Press Start 2P', monospace;
-  font-size: 1.5vw;
+  font-size: 27px;
   font-weight: bold;
   color: #fff;
   line-height: 1.2;
@@ -335,7 +339,7 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
 }
 .proj-desc {
   font-family: 'Thasadith', Arial, sans-serif;
-  font-size: 1vw;
+  font-size: 17px;
   color: #ccc;
   font-weight: bold;
   margin-bottom: 0;
@@ -358,6 +362,35 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
   opacity: 0;
   transform: translateX(40px);
   transition: opacity 400ms, transform 400ms;
+}
+
+/* For nav button fade only */
+.nav-fade-enter {
+  opacity: 0;
+  transform: scale(0.95);
+}
+.nav-fade-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
+}
+.nav-fade-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.nav-fade-exit-active {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
+}
+
+.nav-dot-fade-in {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+.nav-dot-fade-out {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
 }
 
 /* DARK MODE (default) */
@@ -388,19 +421,34 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
 }
 
 /* LIGHT MODE */
-.center-container.light-mode {
-  background: #fff;
-}
+
+
 .landing-border.light-mode {
   background: #fff;
   border: 1px solid #000;
   color: #000;
+  filter: invert(1) hue-rotate(180deg) brightness(0.9);
 }
-.landing-border.light-mode .name,
-.landing-border.light-mode .subtitle,
+.landing-border.light-mode .name { color: #000 !important; }
+.landing-border.light-mode .subtitle { color: #000 !important; }
 .landing-border.light-mode .sidebar-nav,
-.landing-border.light-mode .vertical-border-text {
-  color: #000;
+.landing-border.light-mode .sidebar-nav button,
+.landing-border.light-mode .vertical-border-text,
+.landing-border.light-mode .landing-header,
+.landing-border.light-mode .landing-content,
+.landing-border.light-mode .landing-bottom-right-text,
+.landing-border.light-mode .technical-box,
+.landing-border.light-mode .education-box,
+.landing-border.light-mode .project-box,
+.landing-border.light-mode .experience-box,
+.landing-border.light-mode .edu-title,
+.landing-border.light-mode .edu-degree,
+.landing-border.light-mode .skills-item,
+.landing-border.light-mode .exp-title,
+.landing-border.light-mode .exp-desc,
+.landing-border.light-mode .proj-title,
+.landing-border.light-mode .proj-desc {
+  color: #000 !important;
 }
 
 .landing-border.light-mode .landing-bottom-right-text,
@@ -412,6 +460,296 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
   border-color: #000;
 }
 
+.landing-bottom-right-text,
+.technical-box,
+.education-box,
+.project-box,
+.experience-box {
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+.landing-bottom-right-text::-webkit-scrollbar,
+.technical-box::-webkit-scrollbar,
+.education-box::-webkit-scrollbar,
+.project-box::-webkit-scrollbar,
+.experience-box::-webkit-scrollbar {
+  display: none;
+}
+
+/* Tablet: stack boxes, reduce padding and font size */
+@media (max-width: 1500px) {
+  
+  .edu-title,
+  .proj-title,
+  .exp-title {
+
+    font-size: 22px;
+
+  }
+}
+
+/* Mobile: full width, smaller padding, readable font */
+@media (max-width: 900px) {
+  .edu-title,
+  .proj-title,
+  .exp-title {
+    
+    font-size: 19px;
+
+  }
+}
+@media (max-width: 650px) {
+  .edu-title,
+  .proj-title,
+  .exp-title {
+    
+    font-size: 16px;
+
+  }
+}
+
+@media (max-width: 650px) {
+  .education-box ,
+  .experience-box{
+    
+    top: 40%;
+    max-width: 80%;
+
+  }
+}
+
+@media (max-width: 650px) {
+  .edu-title,
+  .proj-title,
+  .exp-title,
+  .edu-degree,
+  .exp-desc,
+  .proj-desc {
+    
+    font-size: 14px;
+
+  }
+}
+
+@media (max-width: 560px) {
+  .edu-title,
+  .proj-title,
+  .exp-title,
+  .edu-degree,
+  .exp-desc,
+  .proj-desc {
+    
+    font-size: 14px;
+
+  }
+}
+
+@media (max-width: 560px) {
+  .education-box,
+  .project-box,
+  .experience-box,
+  .technical-box,
+  .landing-bottom-right-text{
+    
+    padding: 12px 12px;
+
+  }
+}
+@media (max-width: 1480px) {
+.landing-bottom-right-text{
+
+  font-size: 17px;
+
+}
+}
+
+@media (max-width: 1100px) {
+  .landing-bottom-right-text{
+  
+    font-size: 15px;
+  
+  }
+  }
+
+  @media (max-width: 780px) {
+    .landing-bottom-right-text{
+    
+      font-size: 13px;
+      max-width: 60%;
+    
+    }
+    }
+    @media (max-width: 560px) {
+      .landing-bottom-right-text{
+      
+        font-size: 12px;
+      
+      }
+      }
+
+      @media (max-width: 1100px) {
+        .technical-box{
+        
+          top:20%;
+        
+        }
+        }
+      
+      @media (max-width: 560px) {
+        .technical-box{
+        
+          top:40%;
+        
+        }
+        }
+      
 
 
+      @media (max-height: 800px) {
+        .landing-bottom-right-text{
+        
+          max-width: 60%;
+        
+        }
+        }
+        @media (max-width: 650px) {
+          .name {
+            
+            font-size: 38px;
+        
+          }
+        }
+        @media (max-width: 650px) {
+          .subtitle {
+            
+            font-size: 16px;
+        
+          }
+        }
+        @media (max-width: 650px) {
+          .sidebar-nav-button {
+            
+            font-size: 13px;
+        
+          }
+        }
+      
+      @media (max-width: 560px) {
+        .name {
+          
+          font-size: 35px;
+      
+        }
+      }
+      @media (max-width: 560px) {
+        .subtitle {
+          
+          font-size: 16px;
+      
+        }
+      }
+      @media (max-width: 560px) {
+        .sidebar-nav button {
+          
+          font-size: 12px;
+      
+        }
+      }
+      @media (max-width: 650px) {
+        .sidebar-nav {
+          
+          margin-top: 50px;
+      
+        }
+      }
+      @media (max-width: 1480px) {
+        .skills-item{
+        
+          font-size: 22px;
+        
+        }
+        }
+        
+        @media (max-width: 1100px) {
+          .skills-item{
+          
+            font-size: 19px;
+          
+          }
+          }
+        
+          @media (max-width: 780px) {
+            .skills-item{
+            
+              font-size: 17px;
+            
+            }
+            }
+            @media (max-width: 560px) {
+              .skills-item{
+              
+                font-size: 13px;
+              
+              }
+              }
+            
+            @media (max-width: 390px) {
+              .skills-item{
+              
+                font-size: 10px;
+              
+              }
+        
+              }
+    
+.center-container.light-mode,
+.landing-border.light-mode,
+.center-container.light-mode *,
+.landing-border.light-mode * {
+  color: #000 !important;
+}
 
+.social-links-box {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  left: auto;
+  background: none;
+  color: #fff;
+  font-family: 'Thasadith', Arial, sans-serif;
+  font-weight: 1300;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  z-index: 3;
+  text-align: right;
+  max-width: 220px;
+  width: max-content;
+  pointer-events: auto;
+}
+.social-links-box span {
+  font-size: 14px;
+  margin-left: 2px;
+}
+
+.social-link-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  text-align: right;
+  padding: 0;
+  gap: 3px;
+  margin: 0 0 6px 0;
+  display: block;
+  pointer-events: auto;
+}
+.social-link-btn:last-child {
+  margin-bottom: 0;
+}
+    
