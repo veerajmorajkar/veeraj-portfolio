@@ -58,13 +58,13 @@ const Landing: React.FC<LandingProps> = ({ onNav, bottomText, activeNav }) => {
       {activeNav === 'about' && (
         <div className="social-links-box">
           <button className="social-link-btn" onClick={() => window.open('https://www.linkedin.com/in/veeraj-morajkar-a24994244/', '_blank')}>
-            <b>LinkedIn</b> <span style={{fontWeight: 'bold'}}>&#8599;</span>
+            <b>LinkedIn</b> <span style={{display: 'inline-block', verticalAlign: 'middle', marginLeft: 2}}><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10L10 4M10 4H5.5M10 4V8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </button>
           <button className="social-link-btn" onClick={() => window.open('https://github.com/veerajmorajkar', '_blank')}>
-            <b>Github</b> <span style={{fontWeight: 'bold'}}>&#8599;</span>
+            <b>Github</b> <span style={{display: 'inline-block', verticalAlign: 'middle', marginLeft: 2}}><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10L10 4M10 4H5.5M10 4V8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </button>
           <button className="social-link-btn" onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=mkar.veeraj@gmail.com&su=SUBJECT&body=BODY', '_blank')}>
-            <b>Email</b> <span style={{fontWeight: 'bold'}}>&#8599;</span>
+            <b>Email</b> <span style={{display: 'inline-block', verticalAlign: 'middle', marginLeft: 2}}><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10L10 4M10 4H5.5M10 4V8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </button>
         </div>
       )}
