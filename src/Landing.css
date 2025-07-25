@@ -3,14 +3,14 @@
     position: absolute;
     top: 32px;
     left: 32px;
-    color: #fff;
+    color: #FFF1E7;
     z-index: 2;
   }
 
 .landing-border {
-  border: 1px solid #fff;
+  border: 1px solid #FFF1E7;
   box-sizing: border-box;
-  background: #000;
+  background: #FFF1E7;
   position: relative;
   aspect-ratio: 16 / 9;
   width: 100vw;
@@ -39,7 +39,7 @@
   flex-direction: column;
   align-items: flex-start;
   z-index: 2;
-  color: #fff;
+  color: #FFF1E7;
 }
 
 .left-column button,
@@ -67,8 +67,8 @@
 .sidebar-nav button {
   background: none;
   border: none;
-  color: #fff;
-  font-family: 'Thasadith', Arial, sans-serif;
+  color: #FFF1E7;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 14px;
   font-weight: bold;      /* Make buttons bold */
   cursor: pointer;
@@ -89,7 +89,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
-  color: #fff;
+  color: #FFF1E7;
   text-align: center;
   z-index: 2;
 }
@@ -107,7 +107,7 @@ body {
   }
   
 .inside-content {
-  color: #fff;               
+  color: #FFF1E7;               
 
 }
 
@@ -131,7 +131,8 @@ body {
 }
 
 body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
-  font-family: 'Thasadith', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
+
 }
 
 .center-container {
@@ -151,8 +152,8 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
-  color: #fff;
-  font-family: 'Thasadith', Arial, sans-serif;
+  color: #FFF1E7;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 22px;
   letter-spacing: 2px;
   z-index: 3;
@@ -168,7 +169,7 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
   top:50%;
   min-width: 40%;
   max-width:40%;
-  color: #fff;
+  color: #FFF1E7;
   padding: 32px 32px;
   font-size: 20px; /* Try reducing this */
   line-height: 1.4;
@@ -197,7 +198,7 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
   padding: 32px 32px;
   font-family: 'Press Start 2P', monospace;
   font-size: 1.2rem;
-  color: #fff;
+  color: #FFF1E7;
   background: transparent;
   overflow: auto;
 }
@@ -268,12 +269,12 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
   font-family: 'Press Start 2P', monospace;
   font-size: 27px;
   font-weight: bold;
-  color: #fff;
+  color: #FFF1E7;
   line-height: 1.2;
   margin-bottom: 8px;
 }
 .edu-degree {
-  font-family: 'Thasadith', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 17px;
   color: #ccc;
   font-weight: bold;
@@ -292,7 +293,7 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
   font-family: 'Press Start 2P', monospace;
   font-size: 25px;
   font-weight: bold;
-  color: #fff;
+  color: #FFF1E7;
   text-align: right;
   letter-spacing: 1px;
 }
@@ -311,12 +312,12 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
   font-family: 'Press Start 2P', monospace;
   font-size: 27px;
   font-weight: bold;
-  color: #fff;
+  color: #FFF1E7;
   line-height: 1.2;
   margin-bottom: 8px;
 }
 .exp-desc {
-  font-family: 'Thasadith', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 17px;
   color: #ccc;
   font-weight: bold;
@@ -337,12 +338,12 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
   font-family: 'Press Start 2P', monospace;
   font-size: 27px;
   font-weight: bold;
-  color: #fff;
+  color: #FFF1E7;
   line-height: 1.2;
   margin-bottom: 8px;
 }
 .proj-desc {
-  font-family: 'Thasadith', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 17px;
   color: #ccc;
   font-weight: bold;
@@ -400,11 +401,11 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
 /* DARK MODE (default) */
 .center-container.dark-mode {
   --bg: #000;
-  --text: #fff;
-  --border: #fff;
+  --text: #FFF1E7;
+  --border: #FFF1E7;
 }
 .center-container.light-mode {
-  --bg: #fff;
+  --bg: #FFF1E7;
   --text: #000;
   --border: #000;
 }
@@ -428,7 +429,7 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
 
 
 .landing-border.light-mode {
-  background: #fff;
+  background: #FFF1E7;
   border: 1px solid #000;
   color: #000;
   filter: invert(1) hue-rotate(180deg) brightness(0.9);
@@ -460,7 +461,7 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
 .landing-border.light-mode .project-box,
 .landing-border.light-mode .experience-box {
   color: #000;
-  background: #fffbe6; /* or #fff for pure white */
+  background: #FFF1E7be; /* or #FFF1E7 for pure white */
   border-color: #000;
 }
 
@@ -721,8 +722,8 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
   right: 10%;
   left: auto;
   background: none;
-  color: #fff;
-  font-family: 'Thasadith', Arial, sans-serif;
+  color: #FFF1E7;
+  font-family: 'Roboto', Arial, sans-serif;
   font-weight: 1300;
   font-size: 16px;
   display: flex;
