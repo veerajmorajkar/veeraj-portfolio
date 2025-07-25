@@ -591,9 +591,18 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
       .landing-bottom-right-text{
       
         font-size: 12px;
+        max-width: 70%;
       
       }
       }
+      @media (max-width: 560px) {
+        .social-links-box{
+        
+          font-size: 11px;
+
+        
+        }
+        }
 
       @media (max-width: 1100px) {
         .technical-box{

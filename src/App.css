@@ -44,9 +44,9 @@ html, body {
   position: relative;
   display: block;
 
-  width: calc(100vw - 80px);
+  width: calc(100vw - 60px);
   height: calc(100vh - 80px);
-  max-width: calc(100vw - 80px);
+  max-width: calc(100vw - 60px);
   max-height: calc(100vh - 80px);
   overflow: hidden;
 }
@@ -186,4 +186,10 @@ html, body {
     opacity: 1;
   }
 }
+@media (max-width: 560px) {
+  .intro-title {
+    
+    font-size: 1.3rem;
 
+  }
+}
