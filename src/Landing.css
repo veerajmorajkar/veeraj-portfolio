@@ -12,8 +12,8 @@
   box-sizing: border-box;
   background: #000;
   position: relative;
-  width: 97vw;
-  height: 92vh;
+  aspect-ratio: 16 / 9;
+
   max-width: 1850px;
   max-height: 950px;
   overflow: hidden;
