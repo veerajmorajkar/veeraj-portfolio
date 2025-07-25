@@ -169,7 +169,7 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
   right: 32px !important;
   top:50%;
   min-width: 40%;
-  max-width:40%;
+  max-width:50%;
   color: #FFF1E7;
   padding: 32px 32px;
   font-size: 20px; /* Try reducing this */
@@ -591,18 +591,20 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
       .landing-bottom-right-text{
       
         font-size: 12px;
-        max-width: 70%;
+        max-width: 80%;
       
       }
       }
-      @media (max-width: 560px) {
-        .social-links-box{
+      @media (max-width: 450px) {
+        .landing-bottom-right-text{
         
-          font-size: 11px;
+          font-size: 9px;
+          width: 80%;
+          top: 55%;
+        
+        }
+        }
 
-        
-        }
-        }
 
       @media (max-width: 1100px) {
         .technical-box{
@@ -615,7 +617,7 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
       @media (max-width: 560px) {
         .technical-box{
         
-          top:40%;
+          top:30%;
         
         }
         }
@@ -742,13 +744,13 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
   color: #FFF1E7;
   font-family: 'Roboto', Arial, sans-serif;
   font-weight: 1300;
-  font-size: 16px;
+  font-size: 14px;
   display: flex;
   flex-direction: column;
   gap: 3px;
   z-index: 3;
   text-align: right;
-  max-width: 220px;
+  max-width: 120px;
   width: max-content;
   pointer-events: auto;
 }

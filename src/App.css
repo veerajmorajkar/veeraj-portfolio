@@ -44,9 +44,9 @@ html, body {
   position: relative;
   display: block;
 
-  width: calc(100vw - 60px);
+  width: calc(100vw - 40px);
   height: calc(100vh - 80px);
-  max-width: calc(100vw - 60px);
+  max-width: calc(100vw - 40px);
   max-height: calc(100vh - 80px);
   overflow: hidden;
 }
