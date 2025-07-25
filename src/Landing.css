@@ -465,9 +465,10 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
 .education-box,
 .project-box,
 .experience-box {
-  overflow: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE and Edge */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  pointer-events: auto;
+  touch-action: auto;
 }
 .landing-bottom-right-text::-webkit-scrollbar,
 .technical-box::-webkit-scrollbar,
@@ -712,7 +713,7 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
 
 .social-links-box {
   position: absolute;
-  top: 10%;
+  top: 20%;
   right: 10%;
   left: auto;
   background: none;
