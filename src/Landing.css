@@ -624,7 +624,7 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
         @media (max-width: 560px) {
           .education-box{
           
-            top:40%;
+            top:30%;
           
           }
         }
