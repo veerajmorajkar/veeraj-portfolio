@@ -617,7 +617,7 @@ body, .landing-header, .landing-content, .name, .subtitle, .sidebar-nav {
       @media (max-width: 560px) {
         .technical-box{
         
-          top:30%;
+          top:20%;
         
         }
         }
