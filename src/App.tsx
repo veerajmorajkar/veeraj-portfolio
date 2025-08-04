@@ -29,7 +29,7 @@ const TECHNICAL_SKILLS_TEXT = `
   <div class='skills-item'>JAVASCRIPT</div>
   <div class='skills-item'>FIGMA</div>
   <div class='skills-item'>UI/UX DESIGN</div>
-  <div class='skills-item'>LTSPICE</div>
+  <div class='skills-item'>NODEJS</div>
   <div class='skills-item'>MATLAB</div>
   <div class='skills-item'>TYPESCRIPT</div>
   <div class='skills-item'>WEB DEVELOPMENT</div>
@@ -52,15 +52,15 @@ const PROJECTS_TEXT = `
 <div class='proj-list'>
   <div class='proj-item'>
     <div class='proj-title'>SMART MIRROR USING AI</div>
-    <div class='proj-desc'>created a smart mirror using a Raspberry Pi 3 Model B and other comps, this smart mirror is capable of marking a persons attendance using face ID, maintaining schedule, displaying (time, weather, date, schedule), responds to questions with accurate google search with assistant voice.</div>
+    <div class='proj-desc'>Designed and built a Raspberry Pi-based smart mirror with a voice assistant for real-time updates, integrated facial recognition for automatic attendance, and personalized schedule display for enhanced daily organization.</div>
   </div>
   <div class='proj-item'>
-    <div class='proj-title'>BRICK-BREAK BALL GAME</div>
-    <div class='proj-desc'>created a java-based brick breaker game where players control a paddle to bounce a ball and destroy bricks to gain points . Features include smooth animations, scoring, progressive difficulty.</div>
+    <div class='proj-title'>USER MANAGEMENT SYSTEM</div>
+    <div class='proj-desc'>Developed a web-based user management system with secure authentication using Next.js and NextAuth, backed by PostgreSQL and Prisma for user data handling, supporting registration, login, and session management.</div>
   </div>
   <div class='proj-item'>
-    <div class='proj-title'>MUSIC SOCIAL MEDIA APP</div>
-    <div class='proj-desc'>created a app connecting people with similar music taste, music exploration, life is convineant</div>
+    <div class='proj-title'>CHOOSE YOUR ADVENTURE GAME</div>
+    <div class='proj-desc'>Developed a web application featuring a React-based interface where users can input a story theme, which communicates with a FastAPI backend to generate and display interactive, customized adventure stories based on user-provided themes.</div>
   </div>
 </div>
 `;
